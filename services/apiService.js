@@ -1,9 +1,9 @@
 const axios = require('axios');
 
-exports.getApiKey = async (name, email) => {
+exports.getApiKey = async (name, email_address) => {
     const response = await axios.post('https://assessment.takafulbrunei.com/v1/candidate/', {
         name,
-        email
+        email_address
     });
     return response.data.apiKey;
 };
